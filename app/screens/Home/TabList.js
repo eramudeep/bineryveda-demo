@@ -21,12 +21,12 @@ export default function TabList({renderScene,Icon}) {
         renderLabel={() => null}
         renderIcon={({route, focused, color}) => { 
         return  (
-          <View style={[{paddingHorizontal:scale(20), }, focused && styles.tabActive  ]} > 
+          <View style={[{paddingHorizontal:scale(10), }, focused && styles.tabActive  ]} > 
             <Icon
-              label="Upload"
+              label={route?.title}
               img={route?.img }
               imgStyle={{height:scale(35), width:scale(35) }}
-              labelStyle={{ fontFamily: "Barlow-Medium", color: appColors.black , opacity:  focused ? 1:  0.45  }}
+              labelStyle={{fontSize:scale( 17), fontFamily: "Barlow-Medium", color: appColors.black , opacity:  focused ? 1:  0.45  }}
             />
           </View>
         )}}
